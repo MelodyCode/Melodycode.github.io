@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>循环（列表） 渲染 | Melody的个人博客</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Hello World!">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.4bd64760.js" as="script"><link rel="preload" href="/assets/js/2.cae01b08.js" as="script"><link rel="preload" href="/assets/js/26.3a2f6f5b.js" as="script"><link rel="prefetch" href="/assets/js/10.9d9f13fd.js"><link rel="prefetch" href="/assets/js/11.ae4f162d.js"><link rel="prefetch" href="/assets/js/12.7946ae6f.js"><link rel="prefetch" href="/assets/js/13.7cf5e4ed.js"><link rel="prefetch" href="/assets/js/14.ca2d886a.js"><link rel="prefetch" href="/assets/js/15.9194acab.js"><link rel="prefetch" href="/assets/js/16.4162c3d7.js"><link rel="prefetch" href="/assets/js/17.afdf0396.js"><link rel="prefetch" href="/assets/js/18.f6d4ecf4.js"><link rel="prefetch" href="/assets/js/19.8c45b6e4.js"><link rel="prefetch" href="/assets/js/20.f36be1a4.js"><link rel="prefetch" href="/assets/js/21.951a28c7.js"><link rel="prefetch" href="/assets/js/22.b2bb296a.js"><link rel="prefetch" href="/assets/js/23.f2235999.js"><link rel="prefetch" href="/assets/js/24.2db98eea.js"><link rel="prefetch" href="/assets/js/25.e97e72ef.js"><link rel="prefetch" href="/assets/js/3.93ad5e29.js"><link rel="prefetch" href="/assets/js/4.7b50080d.js"><link rel="prefetch" href="/assets/js/5.94fd6fdc.js"><link rel="prefetch" href="/assets/js/6.8bb5960a.js"><link rel="prefetch" href="/assets/js/7.199b11cc.js"><link rel="prefetch" href="/assets/js/8.b7aa8606.js"><link rel="prefetch" href="/assets/js/9.c7943dd0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Melody的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">
+  前端
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/basic/" class="nav-link">
+  计算机基础
+</a></div><div class="nav-item"><a href="https://github.com/MelodyCode/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/web/" class="nav-link router-link-active">
+  前端
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link">
+  面试
+</a></div><div class="nav-item"><a href="/basic/" class="nav-link">
+  计算机基础
+</a></div><div class="nav-item"><a href="https://github.com/MelodyCode/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/web/" aria-current="page" class="sidebar-link">介绍</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Node.js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Vue</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/web/vue/" aria-current="page" class="sidebar-link">目录</a></li><li><a href="/web/vue/vuenote.html" aria-current="page" class="active sidebar-link">vue笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/web/vue/vuenote.html#循环-列表-渲染" class="sidebar-link">循环（列表） 渲染</a></li><li class="sidebar-sub-header"><a href="/web/vue/vuenote.html#事件" class="sidebar-link">事件</a></li><li class="sidebar-sub-header"><a href="/web/vue/vuenote.html#按键修饰符" class="sidebar-link">按键修饰符</a></li><li class="sidebar-sub-header"><a href="/web/vue/vuenote.html#表单" class="sidebar-link">表单</a></li><li class="sidebar-sub-header"><a href="/web/vue/vuenote.html#vue组件使用" class="sidebar-link">Vue组件使用</a></li><li class="sidebar-sub-header"><a href="/web/vue/vuenote.html#vue高级特性" class="sidebar-link">Vue高级特性</a></li><li class="sidebar-sub-header"><a href="/web/vue/vuenote.html#真题演练" class="sidebar-link">真题演练：</a></li><li class="sidebar-sub-header"><a href="/web/vue/vuenote.html#axios使用" class="sidebar-link">Axios使用</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="循环-列表-渲染"><a href="#循环-列表-渲染" class="header-anchor">#</a> 循环（列表） 渲染</h2> <p><img src="https://img-blog.csdnimg.cn/d4545946f01947bfa35a70c604d3b0cf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述">
+v-if和v-for不要用在同一层级，v-for优先级高一点，
+<img src="https://img-blog.csdnimg.cn/ad69b96905c14b7cad9cec0bebb90bd2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p> <h2 id="事件"><a href="#事件" class="header-anchor">#</a> 事件</h2> <p>event.<strong>proto</strong>.constructor//event对象是原生的
+event.target 事件被挂载到当前元素
+event.currentTarget</p> <h2 id="按键修饰符"><a href="#按键修饰符" class="header-anchor">#</a> 按键修饰符</h2> <h2 id="表单"><a href="#表单" class="header-anchor">#</a> 表单</h2> <p>输入框
+<img src="https://img-blog.csdnimg.cn/e133cc488b634c1881495ee68d67f23f.png" alt="在这里插入图片描述">
+多行文本
+<img src="https://img-blog.csdnimg.cn/c8b5c53e17154b19b7e16e6772578bf8.png" alt="在这里插入图片描述">
+复选框：checked 布尔值
+<img src="https://img-blog.csdnimg.cn/f60a0937c3be4cff8d6b658486d3a9ca.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">
+单选：
+<img src="https://img-blog.csdnimg.cn/148bbde461bc476fbbb2f6f15def3d87.png" alt="在这里插入图片描述"></p> <p>下拉列表
+<img src="https://img-blog.csdnimg.cn/f5f999cb683c41dfb1718aee7fc254a1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p> <h2 id="vue组件使用"><a href="#vue组件使用" class="header-anchor">#</a> Vue组件使用</h2> <ul><li><p>props和$emit
+props 从父组件传入自组件
+//index<img src="https://img-blog.csdnimg.cn/0efb06b5853e414c84db0cd3dcc5e0fb.png" alt="在这里插入图片描述">
+将list数组传入List组件
+list.vue
+<img src="https://img-blog.csdnimg.cn/3cebff3d09dc48e9a6441b09cc628b9f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_17,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">
+$emit子组件向父组件触发事件</p></li> <li><p>组件间通讯-自定义事件（兄弟组件通讯）
+在list中绑定事件
+<img src="https://img-blog.csdnimg.cn/8c183640725a4321a87eca5f8b5dd00a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述">
+解绑事件：
+<img src="https://img-blog.csdnimg.cn/893b21952fe540a2bf7edd75679f8eb3.png" alt="在这里插入图片描述"></p></li></ul> <p>在Input中触发：
+<img src="https://img-blog.csdnimg.cn/8602a902022b41bc8dbd78f62dc4c116.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p> <ul><li>Vue实例生命周期（参考官方文档https://cn.vuejs.org/v2/guide/instance.html）
+<ul><li><em>（考点）mounted 与 created区别？</em> <ul><li>created Vue()实例初始化完毕，但是页面没有渲染；mounted页面渲染完毕</li></ul></li></ul></li> <li>父子组件的生命周期</li></ul> <h2 id="vue高级特性"><a href="#vue高级特性" class="header-anchor">#</a> Vue高级特性</h2> <ul><li><p><strong>自定义v-model</strong></p> <ul><li>双向绑定：都是通过数据的改变去驱动 DOM 视图的变化，而双向绑定除了数据驱动 DOM 外， DOM 的变化反过来影响数据，是一个双向关系，vue中用v-model实现
+<img src="https://img-blog.csdnimg.cn/9fc68e1b2abd44d098e0ea6e3a7a2420.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"> <img src="https://img-blog.csdnimg.cn/5f31ff9442fa4a7cad5c65bffcb96dd1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></li> <li>注意：
+<ul><li>上面的input使用了:value 而不是 v-model</li> <li>上面的change和model.event 要对应起来</li> <li>text属性对应起来</li></ul></li></ul></li> <li><p><strong>$nextTick</strong></p> <ul><li>Vue是异步渲染</li> <li>data改变后，DOM不会立刻渲染</li> <li>$nextTick会在DOM渲染完再回调，以获取最新DOM节点</li> <li>页面渲染时会将data的修改做整合，多次data修改只会渲染一次
+<img src="https://img-blog.csdnimg.cn/ca0a9f3197dd45c2bf86ca79ab7d6e1c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"> <img src="https://img-blog.csdnimg.cn/a4072e2bce364c369e58b2c1d2cc11fd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li></ul></li> <li><p><strong>slot</strong></p> <ul><li><p>基本使用 ：父组件往子组件插入内容
+<img src="https://img-blog.csdnimg.cn/c2aae00cdaae48258d35c2bbe4bfbd39.png" alt="在这里插入图片描述"> <img src="https://img-blog.csdnimg.cn/91998ee8da1449cb952f063da05dbb7b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p></li> <li><p>作用域插槽：子组件有作用域data，如何让父组件获取到？
+父
+<img src="https://img-blog.csdnimg.cn/b17caeb8a98f4df58dbc8d48c8d3c82b.png" alt="在这里插入图片描述">
+插槽
+<img src="https://img-blog.csdnimg.cn/b26649d678d547528ddf71cfb2c680fe.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p></li> <li><p>具名插槽：多个插槽一一对应
+<img src="https://img-blog.csdnimg.cn/b851dd72d10e48879a70ddb0d561dadf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p></li></ul></li> <li><p><strong>vue动态组件</strong></p> <ul><li>:is = &quot;component-name&quot;用法</li> <li>需要根据数据，动态渲染的场景，即组件类型不确定。eg：加载新闻
+<img src="https://img-blog.csdnimg.cn/85d78e86a4fd44ff95eecff70d287708.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_19,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"> <img src="https://img-blog.csdnimg.cn/1cc2728649a3443eaf545a590ac915a3.png" alt="请添加图片描述">
+根据type渲染对应类型的组件</li></ul></li> <li><p><strong>异步组件</strong>：大组件什么时候用到什么时候异步加载</p> <ul><li>import()函数</li> <li>按需加载
+<img src="https://img-blog.csdnimg.cn/2f15d55229df4811b140a751081787e5.png" alt="请添加图片描述"> <img src="https://img-blog.csdnimg.cn/f6bd095ece8f4da09c8b6e3655a11681.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></li></ul></li> <li><p><strong>vue如何缓存组件？keep- alive</strong></p> <ul><li><p>缓存组件</p></li> <li><p>频繁切换，不需要重复渲染，eg：tag切换</p></li> <li><p>Vue常见性能优化</p></li> <li><p>与v-show区别：v-show通过css 的display控制，keep-alive通过Vue框架层级控制<img src="https://img-blog.csdnimg.cn/90953c63c11a43408cf1cb1a098ab4d5.png" alt="请添加图片描述"></p></li></ul></li> <li><p><strong>vue组件如何抽离公共逻辑</strong></p> <ul><li>mixin基本使用</li> <li>mixin存在的问题：变量来源不明确，不利于阅读；多mixin 可能会造成命名冲突（引入多个mixin，里面有相同属性）；mixin和组件可能多对多的关系，复杂度较高
+<img src="https://img-blog.csdnimg.cn/6420442e750041e48b65e1e736cc2e94.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"> <img src="https://img-blog.csdnimg.cn/4dea772e63f64924bc83dbc2bbac8091.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li></ul></li> <li><p><strong>vuex</strong></p> <ul><li>基本概念：
+<ul><li>state</li> <li>getters</li> <li>action</li> <li>mutation</li></ul></li> <li>用于Vue组件
+<ul><li>dispatch</li> <li>commit</li> <li>mapState</li> <li>mapGetters</li> <li>mapActions</li> <li>mapMutations<img src="https://img-blog.csdnimg.cn/7e15d044b33e4317903a6ca82e5bb763.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述">
+注意：只有在Actions里面才能异步操作例如ajax</li></ul></li></ul></li> <li><p>Vue-router使用</p> <ul><li>路由模式（hash、H5 history）
+<ul><li><p>hash模式（默认）如：http://abc.com/#/user/10</p> <ul><li>特点：通过url的hash值变化触发路由的变化，实现页面根据hash值渲染对应内容，实现路由跳转
+<ul><li>hash变化会触发网页跳转，即浏览器的前进、后退
+hash 变化不会刷新页面，SPA必须的特点
+hash永远不会提交到server端（完全属于前端控制）
+实现路由跳转依赖于API window.onhashchange</li></ul></li></ul></li> <li><p>H5 history 模式： 如 http://abc.com/user/20</p> <ul><li>通过URL变化触发路由的变化，实现路由跳转，并不刷新页面，需要后端支持，通过url无法区分是前端路由还是后端路由。用url规范的路由，但只跳转不刷新页面
+需要后端支持
+实现路由跳转依赖于两个重要API， history.pushState &amp; window.onpopstate</li></ul></li> <li><p>表现一样，url发生变化，进行路由跳转，但都不刷新页面。</p> <p>实现方式不同，hash不依赖于后端，h5 history依赖于后端。</p> <p>那么如何抉择使用哪种模式呢？</p> <p>to B的系统推荐使用hash，简单易用，对url规范不敏感
+to C的系统，可以考虑选择H5 history，但需要后端服务支持</p></li></ul></li></ul> <p><img src="https://img-blog.csdnimg.cn/eae0062400ca4b73b1018e3982f4936d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></p> <div class="language- extra-class"><pre><code>  - 动态路由：
+</code></pre></div><p><img src="https://img-blog.csdnimg.cn/754668b871c24904b5a940b36bfc866e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述">
+- 路由懒加载
+当打包构建应用时，JavaScript 包会变得非常大，影响页面加载。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应组件，这样就会更加高效。
+<img src="https://img-blog.csdnimg.cn/dad6bfa5f182413b8199969e967c8b7e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></p></li></ul> <h2 id="真题演练"><a href="#真题演练" class="header-anchor">#</a> 真题演练：</h2> <ul><li>v-show 和 v-if区别？
+<ul><li>v-show 通过CSS display控制显示和隐藏</li> <li>v-if组件真正的渲染和销毁，而不是显示和隐藏</li> <li>频繁切换显示状态用v-show，否则用v-if</li></ul></li> <li>为何在v-for中使用key
+<ul><li>必须用key，且不能是index和random</li> <li>diff算法中通过tag和key判断，是否是sameNode</li> <li>减少渲染次数，提升渲染性能</li></ul></li> <li>描述Vue组件生命周期（父子组件）
+<ul><li>单组件的生命周期图</li> <li>父子组件（creat mount distroy顺序）</li></ul></li> <li>Vue组件如何通讯
+<ul><li>父子组件props和this.$emit</li> <li>自定义事件 event.$no event.$off event.$emit</li> <li>vuex</li></ul></li> <li>描述组件渲染和更新的过程
+<img src="https://img-blog.csdnimg.cn/fa2c5cdf776142a8a5e6696f044a129f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></li> <li>双向数据绑定v-model实现原理
+<ul><li>input元素的value = this.name</li> <li>绑定input事件 this.name = $event.target.value</li> <li>data更新触发re-render</li></ul></li> <li>对MVVM理解<img src="https://img-blog.csdnimg.cn/74e631122d89414480c235f8856f761d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></li> <li>computed有何特点
+<ul><li>缓存，data不变不会重新计算</li> <li>提高性能</li></ul></li> <li>为何组件data必须是一个函数？
+<ul><li>定义的组件是一个类，使用时相当于类的实例化，data是个函数，里面是数据在闭包中，每个组件里面是数据可以单独修改</li></ul></li> <li>Ajax请求应该放在哪个生命周期
+<ul><li>mounted，整个渲染完成，DOM加载完成</li> <li>为什么？JS是单线程，ajax异步获取数据</li> <li>放在mounted之前没用，只会让逻辑更混乱</li></ul></li> <li>如何将组件所有props传递给子组件
+<ul><li>$props,</li> <li>用法：<User></User></li></ul></li> <li>如何自己实现 v-model
+<img src="https://img-blog.csdnimg.cn/484b968c9d374c7fb164d7f69871ca32.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li> <li>多个组件有相同的逻辑，如何抽离
+<ul><li>mixin</li> <li>mixin缺点</li></ul></li> <li>何时要使用异步组件
+<ul><li>加载大组件，eg图表</li> <li>路由的异步加载</li></ul></li> <li>何时需要使用keep-alive
+<ul><li>缓存组件，不需要重复渲染</li> <li>如多个静态tab页的切换</li> <li>优化性能</li></ul></li> <li>何时需要使用beforeDestory
+<ul><li>解绑自定义事件 event.$off,防止内存泄漏</li> <li>清除定时器</li> <li>解绑自定义的dom事件，如window scroll</li></ul></li> <li>什么是作用域插槽
+<ul><li>slot 里面有自己的data，想吧data传入使用slot的地方</li></ul></li> <li>Vuex中action 和 mutation有何区别
+<ul><li>action中处理异步，mutation不可以</li> <li>mutation做原子操作</li> <li>action可以整个多个mutation</li></ul></li> <li>Vue-router路由模式
+<ul><li>hash默认</li> <li>H5history（需要服务端支持）</li> <li>两者比较</li> <li>二者分别怎么实现</li></ul></li> <li>如何配置Vue-router异步加载
+path component
+<img src="https://img-blog.csdnimg.cn/d0815a110d8e41088ead09220c6089f5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li> <li>用vnode描述一个DOM结构
+<img src="https://img-blog.csdnimg.cn/789cc8e444ff4dba89bcf1a4c2e4c8fd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"></li> <li>监听data变化的核心API是什么
+<ul><li>Object.defineProperty</li> <li>深度监听，监听数组</li> <li>有什么缺点</li></ul></li> <li>Vue如何监听数组变化
+<ul><li>Object.defineProperty不能监听数组变化</li> <li>重新定义原型，重写push pop等方法，实现监听</li> <li>Proxy可以与原生支持</li></ul></li> <li>请描述响应式原理
+<ul><li>监听data变化</li> <li>组件渲染和更新的流程</li></ul></li> <li>diff算法的时间复杂度：O(n)</li> <li>简述diff算法过程
+<img src="https://img-blog.csdnimg.cn/7611a62232894b5d84b72c17df6d59e0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qyjTW9vbg==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="请添加图片描述"></li> <li>vue为何是异步渲染，$nextTick何用
+<ul><li>异步渲染（以及合并data修改），提高渲染性能</li> <li>$nextTick 在DOM更新完之后，触发回调</li></ul></li> <li>Vue常见性能优化
+<ul><li>合理使用v-show 和 v-if</li> <li>合理使用computed</li> <li>v-for时加key，以及避免和v-if同时使用</li> <li>自定义事件，DOM事件及时销毁</li> <li>合理使用异步组件</li> <li>合理使用keep-alive</li> <li>data层级不要太深</li> <li>使用vue-loader在开发环境做模板编译（预编译）</li> <li>webpack层面优化</li> <li>前端通用的性能优化：如图片懒加载</li> <li>使用SSR</li></ul></li></ul> <h2 id="axios使用"><a href="#axios使用" class="header-anchor">#</a> Axios使用</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/web/vue/" class="prev router-link-active">
+        目录
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4bd64760.js" defer></script><script src="/assets/js/2.cae01b08.js" defer></script><script src="/assets/js/26.3a2f6f5b.js" defer></script>
+  </body>
+</html>
